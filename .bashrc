@@ -116,9 +116,12 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# trend alias that sets env variables for project_trending flask. It also starts the venv and flask run
-alias trend='~/scripts/trendVars.sh'
+## trend alias that sets env variables for project_trending flask. It also starts the venv and flask run
+#alias trend='~/scripts/trendVars.sh'
+#
+## updates alias that does the "sudo apt -y update/upgrade/autoremove"
+#alias updates='~/scripts/updates.sh'
 
-# updates alias that does the "sudo apt -y update/upgrade/autoremove"
-alias updates='~/scripts/updates.sh'
+PATH=$PATH:~/scripts/
+120 alias trend='source ~/scripts/trendVars'
 
