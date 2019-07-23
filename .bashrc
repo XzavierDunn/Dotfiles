@@ -118,3 +118,7 @@ fi
 
 PATH=$PATH:~/scripts/
 alias trend='source ~/scripts/trendVars'
+alias aws='~/.local/bin/aws'
+alias pip='python3 -m pip'
+alias docker='sudo docker'
+alias docker-compose='sudo docker-compose'
