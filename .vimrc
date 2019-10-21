@@ -12,6 +12,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'sheerun/vim-polyglot'
+Plug 'neovimhaskell/haskell-vim'
 call plug#end()
 
 " NERDTree Binds
@@ -28,7 +29,7 @@ let NERDTreeDirArrows = 1
 
 " General Binds
 set nocompatible
-syntax enable
+syntax on
 filetype indent plugin on
 
 let mapleader=","

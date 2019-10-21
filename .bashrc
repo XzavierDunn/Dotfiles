@@ -118,10 +118,12 @@ fi
 
 PATH=$PATH:~/Scripts/
 alias trend='source ~/scripts/trendVars'
-alias aws='~/.local/bin/aws'
-alias pip='python3 -m pip'
 alias docker='sudo docker'
 alias docker-compose='sudo docker-compose'
 
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
+
+stty -ixon
+stty -ixoff
+
