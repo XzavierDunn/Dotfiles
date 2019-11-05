@@ -120,6 +120,8 @@ PATH=$PATH:~/Scripts/
 alias trend='source ~/scripts/trendVars'
 alias docker='sudo docker'
 alias docker-compose='sudo docker-compose'
+alias shutaws='~/workspace/personal/awsEc2/shutdownEc2'
+alias yoink='git pull'
 
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
