@@ -1,18 +1,21 @@
-" Make Sure vim plug installed if not, Installs
+" Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-set nocompatible
+
+" Run PlugInstall if there are missing plugins
+autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \| PlugInstall --sync | source $MYVIMRC
+\| endif
 
 " List of all plugins
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-surround'
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'sheerun/vim-polyglot'
 Plug 'neovimhaskell/haskell-vim'
+Plug 'fatih/vim-go'
 call plug#end()
 
 " NERDTree Binds
@@ -73,4 +76,3 @@ highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE gui
 " Red block if you are over 80
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%81v', 100)
-
