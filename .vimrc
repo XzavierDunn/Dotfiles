@@ -1,13 +1,10 @@
 " Install vim-plug if not found
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
-
-" Run PlugInstall if there are missing plugins
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim endif " Run PlugInstall if there are missing plugins
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
-\| endif
+\| endif 
+endif
 
 " List of all plugins
 call plug#begin()
@@ -16,6 +13,8 @@ Plug 'tpope/vim-surround'
 Plug 'sheerun/vim-polyglot'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'fatih/vim-go'
+Plug 'rust-lang/rust.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " NERDTree Binds
@@ -33,6 +32,7 @@ let NERDTreeDirArrows = 1
 " General Binds
 set nocompatible
 syntax on
+syntax enable
 filetype indent plugin on
 
 let mapleader=","
@@ -70,9 +70,13 @@ set laststatus=0
 "set shortmess=F
 
 " Handles line Numbering, and color for said lines
-set number relativenumber
+set relativenumber
 set numberwidth=3
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
 " Red block if you are over 80
 highlight ColorColumn ctermbg=red
 call matchadd('ColorColumn', '\%81v', 100)
+
+" Center Cursor
+" nnoremap k kzz
+" nnoremap j jzz
