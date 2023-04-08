@@ -1,0 +1,42 @@
+General: remap.lua
+    lead-pv: view dir
+    lead-p: paste and keep
+    lead-y: copy to clipboard
+    lead-Y: only yank
+    lead-s: global replace word under cursor
+    lead-x: make cur file executable
+
+Telescope: telescope.lua
+    lead-pf: search
+    C-p: search git files
+    lead-ps: grep
+
+Harpoon: harpoon.lua
+    lead-a: add file
+    <C-e>: quick menu
+    <C-h>: go file 1
+    <C-t>: go file 2
+    <C-n>: go file 3
+    <C-s>: go file 4
+
+lsp-zero: https://github.com/VonHeikemen/lsp-zero.nvim#keybindings
+    K: Displays hover information about the symbol under the cursor in a floating window. See :help vim.lsp.buf.hover().
+    gd: Jumps to the definition of the symbol under the cursor. See :help vim.lsp.buf.definition().
+    gD: Jumps to the declaration of the symbol under the cursor. Some servers don't implement this feature. See :help vim.lsp.buf.declaration().
+    gi: Lists all the implementations for the symbol under the cursor in the quickfix window. See :help vim.lsp.buf.implementation().
+    go: Jumps to the definition of the type of the symbol under the cursor. See :help vim.lsp.buf.type_definition().
+    gr: Lists all the references to the symbol under the cursor in the quickfix window. See :help vim.lsp.buf.references().
+    gs: Displays signature information about the symbol under the cursor in a floating window. See :help vim.lsp.buf.signature_help(). If a mapping already exists for this key this function is not bound.
+    <F2>: Renames all references to the symbol under the cursor. See :help vim.lsp.buf.rename().
+    <F3>: Format code in current buffer. See :help vim.lsp.buf.format().
+    <F4>: Selects a code action available at the current cursor position. See :help vim.lsp.buf.code_action().
+    gl: Show diagnostics in a floating window. See :help vim.diagnostic.open_float().
+    [d: Move to the previous diagnostic in the current buffer. See :help vim.diagnostic.goto_prev().
+    ]d: Move to the next diagnostic. See :help vim.diagnostic.goto_next().
+
+Fugitive: fugitive.lua
+    lead-gs: run git commands
+
+Undotree: undotree.lua
+    lead-u: open tree
+
