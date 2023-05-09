@@ -139,11 +139,6 @@ _G.packer_plugins = {
     path = "/home/xd/.local/share/nvim/site/pack/packer/start/rose-pine",
     url = "https://github.com/rose-pine/neovim"
   },
-  ["solarized.nvim"] = {
-    loaded = true,
-    path = "/home/xd/.local/share/nvim/site/pack/packer/start/solarized.nvim",
-    url = "https://github.com/shaunsingh/solarized.nvim"
-  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/xd/.local/share/nvim/site/pack/packer/start/telescope.nvim",
