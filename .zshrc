@@ -95,12 +95,48 @@ source $ZSH/oh-my-zsh.sh
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias update="~/Scripts/updates"
+alias cr="cargo run"
+alias server="eval $(~/server01/connect.sh)"
+alias server2="eval $(~/server02/connect.sh)"
+alias t="~/Scripts/catchup.sh"
+
+# Add Scripts folder to path
+export PATH=$HOME/Scripts:$PATH
 
 # NVM GARBAGE
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# nvim
+alias nvim="~/bin/nvim.appimage"
+
+# postman
+alias pman="~/bin/Postman/Postman"
+
+# unstable chrome for webgpu
+alias gpu="google-chrome-unstable --enable-unsafe-webgpu --enable-features=Vulkan,UseSkiaRenderer"
+
+# MVN setup (java :( )
+M2_HOME="/opt/apache-maven-3.9.4"
+PATH="$M2_HOME/bin:$PATH"
+export PATH
+
+
+# bun completions
+[ -s "/home/xd/.bun/_bun" ] && source "/home/xd/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# golang
+PATH=$PATH:/usr/local/go/bin
+
+# thinkorswim
+PATH=$HOME/thinkorswim:$PATH
