@@ -15,6 +15,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     -- Themes
     { "rose-pine/neovim", as = "rose-pine" },
+    { "sainnhe/gruvbox-material", as = "gruvbox-material" },
 
     -- LSP 
     { "williamboman/mason.nvim" },
@@ -56,6 +57,51 @@ require("lazy").setup({
         build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
     },
 
+    -- java
+    { "mfussenegger/nvim-jdtls" },
+    { "nvim-java/nvim-java",
+      dependencies = {
+        "nvim-java/nvim-java-refactor",
+        "nvim-java/lua-async-await",
+        "nvim-java/nvim-java-core",
+        "nvim-java/nvim-java-test",
+        "nvim-java/nvim-java-dap",
+        "MunifTanjim/nui.nvim",
+        "neovim/nvim-lspconfig",
+        "mfussenegger/nvim-dap",
+        {
+          "williamboman/mason.nvim",
+          opts = {
+            registries = {
+              "github:nvim-java/mason-registry",
+              "github:mason-org/mason-registry",
+            },
+          },
+        },
+        {
+          "williamboman/mason-lspconfig.nvim",
+          opts = {
+            handlers = {
+              ["jdtls"] = function()
+                require("java").setup()
+              end,
+            },
+          },
+        },
+      },
+    },
+
     -- copilot
-    { "github/copilot.vim" },
+    --{ "github/copilot.vim" },
+    --{
+    --  "CopilotC-Nvim/CopilotChat.nvim",
+    --  branch = "canary",
+    --  dependencies = {
+    --    { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+    --    { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+    --  },
+    --  opts = {
+    --    debug = true, -- Enable debugging
+    --  },
+    --},
 }, {})
