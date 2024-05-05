@@ -92,16 +92,19 @@ require("lazy").setup({
     },
 
     -- copilot
-    --{ "github/copilot.vim" },
-    --{
-    --  "CopilotC-Nvim/CopilotChat.nvim",
-    --  branch = "canary",
-    --  dependencies = {
-    --    { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
-    --    { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
-    --  },
-    --  opts = {
-    --    debug = true, -- Enable debugging
-    --  },
-    --},
+    { "github/copilot.vim" },
+    {
+      "CopilotC-Nvim/CopilotChat.nvim",
+      branch = "canary",
+      dependencies = {
+        { "zbirenbaum/copilot.lua" }, -- or github/copilot.vim
+        { "nvim-lua/plenary.nvim" }, -- for curl, log wrapper
+      },
+      opts = {
+        debug = true, -- Enable debugging
+      },
+    },
+
+    -- DiffView
+    { "sindrets/diffview.nvim" },
 }, {})
